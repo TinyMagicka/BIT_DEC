@@ -28,7 +28,6 @@ public abstract class ZipUtils {
 	public static final String EXT = ".zip";
 	private static final String BASE_DIR = "";
 
-	// 绗﹀彿"/"鐢ㄦ潵浣滀负鐩綍鏍囪瘑鍒ゆ柇绗�
 	private static final String PATH = "/";
 	private static final int BUFFER = 1024;
 
