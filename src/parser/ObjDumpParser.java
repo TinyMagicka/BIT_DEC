@@ -20,19 +20,23 @@ import bit_dec.dissambler.DisBlock;
 import bit_dec.dissambler.DisFunction;
 import bit_dec.dissambler.DisInst;
 import bit_dec.dissambler.DisSection;
-
 public class ObjDumpParser extends BinaryPaser {
 
 	public static ArrayList<DisSection> sectiton_Stack = new ArrayList<DisSection>();
 	static ArrayList<DisFunction> function_Stack = new ArrayList<DisFunction>();
 	static ArrayList<DisInst> instruction_Stack = new ArrayList<DisInst>();
-	
 	/**
 	 * generate assembler data
 	 * @param pathnamehghg
 	 */
 	public void generateAssembler(String pathname) {
-
+		
+		
+		
+		sectiton_Stack.clear();
+		function_Stack.clear();
+		instruction_Stack.clear();
+		
 		String encodeing = "GBK";
 		long index = 0;
 		File file = new File(pathname);
@@ -237,11 +241,7 @@ public class ObjDumpParser extends BinaryPaser {
 		} catch (Exception e) {
 		}
 		AllBblockGen();
-		try {
-			PrintBlock();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		//PrintBlock();
 	}
 	
 	

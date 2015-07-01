@@ -1,5 +1,10 @@
 package bit_dec.views;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.eclipse.swt.SWT;
@@ -25,6 +30,7 @@ public class functionsView extends ViewPart {
 	}
 
 	public void showFunctions(){
+		
 		final ObjDumpParser objdump = new  ObjDumpParser();
 		ArrayList<DisFunction> funclist = objdump.getTextFunList();
 		int funcNum = funclist.size();
@@ -32,11 +38,10 @@ public class functionsView extends ViewPart {
 		for(int i=0;i<funcNum;i++){
 			String tempString;
 			tempString = funclist.get(i).getFunctionName();
-			System.out.println(tempString);
 			list.add(tempString);
 			arrayList.add(tempString);
 		}
-
+		
 		SelectionListener listener = new SelectionListener() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {

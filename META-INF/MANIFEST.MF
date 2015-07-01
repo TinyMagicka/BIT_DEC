@@ -14,7 +14,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.views;bundle-version="3.6.100",
  org.eclipse.ui.navigator.resources;bundle-version="3.4.501",
  org.eclipse.ui.workbench.texteditor;bundle-version="3.8.101",
- org.eclipse.ui.examples.javaeditor;bundle-version="3.1.300"
+ org.eclipse.ui.examples.javaeditor;bundle-version="3.1.300",
+ org.eclipse.cdt.debug.application;bundle-version="1.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
